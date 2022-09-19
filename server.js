@@ -8,9 +8,6 @@ const bodyParser = require('body-parser');
 const session    = require('cookie-session');
 const flash      = require('connect-flash');
 const layout     = require('express-ejs-layouts');
-// const errorHandler = require('middleware/error-handler');
-// const adminroutes  = require('./routes/admin.route');
-// const parishAdminRoute = require('./routes/parish.admin.routes');
 const users = require('./routes/routes');
 
 
@@ -19,8 +16,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 app.use(morgan('dev'));
 dotenv.config();
-
-// const connection = require('./helpers/newsampledb');
 
 /* ----------- PUBLIC FILES --------- */
 app.use(express.static('public'));
